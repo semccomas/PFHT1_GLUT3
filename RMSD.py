@@ -24,7 +24,7 @@ def plot_RMSD(sim_name, cname, lname):
     plt.ylim(0,3)
 
 plot_RMSD('pfht1_apo', '#FF1A1A', 'PfHT1 apo')
-plot_RMSD('pfht1_holo', '#F97A1C', 'PfHT1 holo')
+plot_RMSD('pfht1_holo', '#FFA47E', 'PfHT1 holo')
 plot_RMSD('glut3_apo', '#2B494F', 'GLUT3 apo')
 plot_RMSD('glut3_holo', '#6E8A94', 'GLUT3 holo')
 

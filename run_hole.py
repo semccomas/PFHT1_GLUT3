@@ -17,11 +17,11 @@ from MDAnalysis.analysis.hole import HOLE
 from MDAnalysis.analysis.hole import HOLEtraj
 import MDAnalysis as mda
 
-protname = 'pfht1_apo'
+protname = 'glut3_apo'
 #indir = '../input_output_f/%s/input_files' %protname
 #outdir = '../input_output_f/%s/output_files' %protname
 indir = '/data3/PFHT1_GLUT3/analysis/input_output_f/%s/input_files' %protname   #HOLE made me have an absolute path for whatever reason
-outdir = '/data3/PFHT1_GLUT3/analysis/input_output_f/%s/output_files' %protname
+outdir = '/data3/PFHT1_GLUT3/analysis/input_output_f/%s/output_files/HOLE' %protname
 def run_hole(file, name, color):
         if 'pfht1' in name:
             H = HOLE(file, executable = '/home/semccomas/hole2/exe/hole', cvect = [0,0,1], cpoint = [51.435, 51.255, 38.52], sample = 0.01) #52.935 #diff cvect for pfht1 and glut3
