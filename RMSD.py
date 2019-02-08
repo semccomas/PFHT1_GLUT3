@@ -11,7 +11,8 @@ import matplotlib.pyplot as plt
 import scipy.ndimage as sp
 
 indir = '/data3/PFHT1_GLUT3/analysis/input_output_f' 
-RMSD_file = 'RMSD_TM7B_alignTM7B.dat'
+#RMSD_file = 'RMSD_TM7B_alignTM7B.dat'
+RMSD_file = 'RMSD_allBB.dat'
 
 def plot_RMSD(sim_name, cname, lname):
     arr = np.loadtxt('%s/%s/output_files/RMSD/%s_%s' %(indir,sim_name,sim_name,RMSD_file), skiprows = 2)
@@ -21,7 +22,7 @@ def plot_RMSD(sim_name, cname, lname):
     plt.plot(arr[:,0], a, color = cname, label = lname)
     plt.legend(loc=2, prop={'size': 8})
     plt.xlim(0,1000)
-    plt.ylim(0,3)
+    plt.ylim(0,5)
 
 plot_RMSD('pfht1_apo', '#FF1A1A', 'PfHT1 apo')
 plot_RMSD('pfht1_holo', '#FFA47E', 'PfHT1 holo')
@@ -32,5 +33,5 @@ plot_RMSD('glut3_holo', '#6E8A94', 'GLUT3 holo')
 ## #0C2FBD more blue
 plt.xlabel('time (ns)')
 plt.ylabel(ur'TM7b RMSD (\u00c5)')
-plt.savefig('../images_graphs/RMSD_TM7b.png', dpi = 1500)    
+plt.savefig('../images_graphs/RMSD_allBB.png', dpi = 1500)    
 
